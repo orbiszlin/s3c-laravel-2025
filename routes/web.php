@@ -1,19 +1,13 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('users', function () {
-    $users = [
-        (object)["id" => 1, "name" => "John"],
-        (object)["id" => 2, "name" => "Jane"],
-        (object)["id" => 3, "name" => "Bob"],
-    ];
-
-    $users = collect($users);
-
-    return view('user.index', compact('users'));
-});
+// routa /users směřuje do UserControlleru a metody index
+Route::get('users', [UserController::class, 'index']); // po zapnutí serveru /users
+// routa /users/{id} směřuje do UserControlleru a metody show a předává parametr {id} do proměnné argumentu metody $id
+Route::get('users/{id}', [UserController::class, 'show']); // po zapnutí serveru /users/1 nebo jiné číslo
