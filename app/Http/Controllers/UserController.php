@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+
 class UserController extends Controller
 {
     /**
@@ -9,13 +11,7 @@ class UserController extends Controller
      */
     function index()
     {
-        $users = [
-            (object)["id" => 1, "name" => "John"],
-            (object)["id" => 2, "name" => "Jane"],
-            (object)["id" => 3, "name" => "Bob"],
-        ];
-
-        $users = collect($users);
+        $users = User::all();
 
         return view('user.index', compact('users'));
     }
