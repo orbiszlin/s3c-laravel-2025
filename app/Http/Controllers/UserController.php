@@ -19,9 +19,9 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    function show($id)
+    function show(User $user)
     {
-        echo "User ID: $id";
+        dd($user);
     }
 
     /**
@@ -29,6 +29,8 @@ class UserController extends Controller
      */
     function create()
     {
+        // Vrátím klasický formulář
+        return view('user.create');
     }
 
     /**
