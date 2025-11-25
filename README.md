@@ -24,7 +24,7 @@ To install, you need to have these components installed on your system:
 4. Set up the project:
    - Copy `.env.example > .env` file and setup the file.
    - Generate key `php artisan key:generate`.
-5. Migrate database and seed all data  `php artisan migrate:fresh --seed`
+5. Migrate database and seed all data  `php artisan migrate:fresh --seed`. _**Pokud používáte SQLite dataábi (ta výchozí) tak pozor:** často se nevytvoří soubor [database.sqlite](database/database.sqlite) ve složce database. Pokud se nevytvoří automaticky, vytvořte jej!_
 6. ~~Build CSS `npm run dev` or `npm run build` for built~~ (not needed yet).
 7. Start server `php artisan serve`.
 
