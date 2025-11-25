@@ -43,8 +43,10 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    function edit($id)
+    function edit(User $user)
     {
+        // Vrátím editační formulář a předá uživatele z bindingu
+        return view('user.edit', compact('user'));
     }
 
     /**
