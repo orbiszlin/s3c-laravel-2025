@@ -18,3 +18,5 @@ Route::get('users/create', [UserController::class, 'create']);
 Route::get('users/{user}', [UserController::class, 'show']); // po zapnutí serveru /users/1 nebo jiné číslo - data musí být naseedované
 
 Route::get('users/{user}/edit', [UserController::class, 'edit']);
+
+Route::post('users', [UserController::class, 'store'])->name('users.store');

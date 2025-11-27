@@ -1,6 +1,6 @@
 <h1>Vytvoření uživatele</h1>
 
-<form action="#">
+<form action="{{route('users.store')}}" method="post">
 
     @csrf
     @include('user.form')
