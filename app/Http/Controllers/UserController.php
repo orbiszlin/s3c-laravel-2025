@@ -50,7 +50,7 @@ class UserController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        dd($user);
+        return redirect()->route('users.index');
     }
 
     /**

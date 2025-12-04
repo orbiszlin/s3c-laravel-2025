@@ -11,8 +11,8 @@
     <input type="password" id="password" name="password" required>
 </div>
 <div>
-    <label for="confirm_password">Confirm password</label>
-    <input type="password" id="confirm_password" name="confirm_password" required>
+    <label for="password_confirmation">Confirm password</label>
+    <input type="password" id="password_confirmation" name="password_confirmation" required>
 </div>
 
 @if ($errors->any())
